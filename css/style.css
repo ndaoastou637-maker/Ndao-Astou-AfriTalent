@@ -1,0 +1,81 @@
+:root {
+  --primary-color: #ff6600;
+  --dark-color: #0d0d0d;
+  --text-color: #ffffff;
+  --bg-color: #111;
+  --font-title: 'Poppins', sans-serif;
+  --font-text: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+  font-family: var(--font-text);
+  color: var(--text-color);
+}
+.nav{
+    display: flex;
+    padding: 15px;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.header{
+    justify-content: flex-end;
+    gap: 20px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+a {
+    text-decoration: white;
+    padding: 10px 15px;
+    color: rgb(233, 196, 161);
+}
+a:hover {
+background-color: beige;
+color: black;
+border-radius: 5px;
+cursor: pointer;
+}
+a {
+    text-decoration: underline;
+}
+body{
+    background-image: url(../images/image.png.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    color: rgb(223, 196, 161);
+    margin: 0;
+    main {
+        padding: 20px;
+    }
+}
+.hero-content{
+   position: absolute;
+   top: 40%;
+   left: 10%;
+   transform: translateY(-50%);
+}
+section{
+    padding: 60px 20px;
+}
+.hero{
+    background: rgb(26, 25, 25);
+    color: white;
+    padding: 40px;
+}
+nav a {
+    color: white;
+    font-weight: bold;
+}
+nav a:hover {
+    color: orange;
+}
