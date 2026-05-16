@@ -474,3 +474,35 @@ ul {
         font-size: 2rem;
     }
 }
+/* ===== DARK MODE ===== */
+body.dark-mode {
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+body.dark-mode #mainNavbar {
+    background-color: #1A1A1A;
+}
+
+body.dark-mode .bento-card,
+body.dark-mode .category-card,
+body.dark-mode .temoignage-card,
+body.dark-mode .plan-card,
+body.dark-mode .freelance-card,
+body.dark-mode .team-card,
+body.dark-mode .valeur-card {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+}
+
+body.dark-mode .section-title {
+    color: #FFFFFF;
+}
+
+body.dark-mode .bg-light-custom {
+    background-color: #1A1A1A;
+}
+
+body.dark-mode .main-footer {
+    background-color: #0A0A0A;
+}
