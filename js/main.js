@@ -49,3 +49,47 @@ darkModeToggle.addEventListener('click', function() {
         darkModeToggle.innerHTML = '<i class="bi bi-moon-fill"></i>';
     }
 });
+// ===== COMPTEURS ANIMÉS =====
+const counters = document.querySelectorAll('.stat-number');
+
+const counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            const target = parseInt(entry.target.getAttribute('data-target'));
+            let count = 0;
+            const increment = target / 100;
+            
+            const timer = setInterval(function() {
+                count += increment;
+                if (count >= target) {
+                    entry.target.textContent = '+' + target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    entry.target.textContent = '+' + Math.floor(count).toLocaleString();
+                }
+            }, 20);
+            
+            counterObserver.unobserve(entry.target);
+        }
+    });
+});
+
+counters.forEach(function(counter) {
+    counterObserver.observe(counter);
+});
+// ===== ANIMATIONS FADE-IN =====
+const sections = document.querySelectorAll('section');
+
+const fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+sections.forEach(function(section) {
+    section.classList.add('fade-in');
+    fadeObserver.observe(section);
+});

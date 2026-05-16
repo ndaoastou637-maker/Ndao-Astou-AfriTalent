@@ -506,3 +506,14 @@ body.dark-mode .bg-light-custom {
 body.dark-mode .main-footer {
     background-color: #0A0A0A;
 }
+/* ===== ANIMATIONS FADE-IN ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
